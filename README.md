@@ -21,7 +21,7 @@ APIs Used
 Flask RESTful API for server-client communication
 MySQL database for storing task and user information
 Contributors
-Blessing Nwakuwo
+Blessing Nwakwuo
 Jesse Kyambadde
 David Agor
 This project is licensed under the MIT License.
