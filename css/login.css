@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
     margin: 100px auto;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px #20315b;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -24,9 +24,10 @@ input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #2a6cd5;
     border-radius: 4px;
     box-sizing: border-box;
+    outline: #20315b;
 }
 
 .error {
@@ -36,13 +37,13 @@ input[type="password"] {
 }
 
 .button {
-    background-color: #4CAF50;
+    background-color: #20315b;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+
 }
 
 @media screen and (max-width: 480px) {
