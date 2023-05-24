@@ -1,78 +1,109 @@
-
-/* primarycolor:	#2a6cd5
-/* secondary: #20315b
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+}
 
 /* Navigation Bar */
 .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .navbar-left {
-    flex: 1;
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-title {
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-  }
-  
-  .navbar-button {
-    color: #fff;
-    background-color: #007bff;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-left: 10px;
-  }
-  
-  /* Homepage Grid */
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-  
-  .grid-item {
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .grid-item h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .grid-item p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  /* Add the 'hidden' class to hide the login and signup forms by default */
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.navbar-button {
+  color: #fff;
+  background-color: #007bff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Homepage Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid-item {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.grid-item h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+/* Add the 'hidden' class to hide the login and signup forms by default */
 .hidden {
-    display: none;
-  }
-  
+  display: none;
+}
+
+.navbar-left .navbar-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-right .navbar-button {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-right .navbar-button:hover {
+  background-color: #555;
+}

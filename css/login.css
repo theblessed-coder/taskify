@@ -1,52 +1,63 @@
 body {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 400px;
-    margin: 100px auto;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #20315b;
-    padding: 20px;
-    box-sizing: border-box;
+  max-width: 400px;
+  margin: 100px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #20315b;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #2a6cd5;
-    border-radius: 4px;
-    box-sizing: border-box;
-    outline: #20315b;
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #2a6cd5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: #20315b;
 }
 
 .error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .button {
-    background-color: #20315b;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #20315b;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+.signup-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.signup-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 480px) {
-    .container {
-        margin-top: 50px;
-    }
+  .container {
+    margin-top: 50px;
+  }
 }
