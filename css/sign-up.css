@@ -40,7 +40,7 @@ input[type='password'] {
 }
 
 input[type='submit'] {
-  background-color: #20315b;
+  background-color: #2a6cd5;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -49,7 +49,7 @@ input[type='submit'] {
 }
 
 input[type='submit']:hover {
-  background-color: #2a6cd5;
+  background-color: #555;
 }
 
 .login-text {
