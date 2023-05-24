@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ h2 {
 }
 
 .button {
-    background-color: #4CAF50;
+    background-color: #2a6cd5;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -58,14 +58,26 @@ li {
     background-color: #fefefe;
     margin: 20% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #2a6cd5;
     width: 300px;
     border-radius: 5px;
     box-sizing: border-box;
 }
 
+.modal-content input {
+    outline: #2a6cd5;
+    border-color: #2a6cd5;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+.modal-content select {
+    border-color: #2a6cd5;
+    outline: #2a6cd5;
+}
+
 .close {
-    color: #888;
+    color: #2a6cd5;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -74,7 +86,6 @@ li {
 
 .close:hover,
 .close:focus {
-    color: #000;
     text-decoration: none;
     cursor: pointer;
 }

@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -37,7 +37,7 @@ h2 {
 }
 
 .button {
-    background-color: #4CAF50;
+    background-color: #20315b;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -46,7 +46,11 @@ h2 {
 }
 
 .button-secondary {
-    background-color: #aaa;
+    background-color: #2a6cd5;
+}
+
+.button:last-child {
+    background-color: #ff0000;
 }
 
 @media screen and (max-width: 480px) {
