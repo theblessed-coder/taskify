@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Blessing Nwakwuo">
+    <title>Projects</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/project-mgt.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Project Management</h1>
+        <div class="projects">
+            <h2>Projects</h2>
+            <button class="button" onclick="openCreateProjectModal()">Create Project</button>
+            <ul id="projectList"></ul>
+        </div>
+        <div class="tasks">
+            <h2>Tasks</h2>
+            <button class="button" onclick="openCreateTaskModal()">Create Task</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+    
+    <!-- Create Project Modal -->
+    <div id="createProjectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateProjectModal()">&times;</span>
+            <h2>Create Project</h2>
+            <input type="text" id="projectName" placeholder="Project Name">
+            <button class="button" onclick="createProject()">Create</button>
+        </div>
+    </div>
+    
+    <!-- Create Task Modal -->
+    <div id="createTaskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateTaskModal()">&times;</span>
+            <h2>Create Task</h2>
+            <input type="text" id="taskName" placeholder="Task Name">
+            <select id="projectSelect">
+                <option value="" selected disabled>Select Project</option>
+            </select>
+            <button class="button" onclick="createTask()">Create</button>
+        </div>
+    </div>
+    
+    <script src="js/project-mgt.js"></script>
+
+</body>
+</html>
