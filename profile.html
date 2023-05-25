@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskify - Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/icon2.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&family=Ubuntu:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-title">Taskify</a>
+            </div>
+            <div class="navbar-right">
+                <a href="index.html" class="navbar-item">Home</a>
+                <a href="dashboard.html" class="navbar-item">Dashboard</a>
+                <a href="task-detail.html" class="navbar-item">Tasks</a>
+                <a href="login.html" class="navbar-button">Login</a>
+                <a href="sign-up.html" class="navbar-button">Signup</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container6">
+        <h2>My Profile</h2>
+        <div class="profile-picture">
+            <img id="profilePic" src="" alt="Profile Picture">
+            <label for="profilePicInput"></label>
+            <input type="file" id="profilePicInput" name="profilePicInput" accept="image/*">
+        </div>
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <br>
+                <textarea id="bio" name="bio" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="interests">Interests</label>
+                <input type="text" id="interests" name="interests" required>
+            </div>
+            <div class="form-group">
+                <label for="facebook">Facebook</label>
+                <input type="text" id="facebook" name="facebook">
+            </div>
+            <div class="form-group">
+                <label for="twitter">Twitter</label>
+                <input type="text" id="twitter" name="twitter">
+            </div>
+            <div class="form-group">
+                <label for="instagram">Instagram</label>
+                <input type="text" id="instagram" name="instagram">
+            </div>
+            <div class="form-group">
+                <label for="linkedin">LinkedIn</label>
+                <input type="text" id="linkedin" name="linkedin">
+            </div>
+            <div class="form-group">
+                <label for="other">Other</label>
+                <input type="text" id="other" name="other">
+            </div>
+            <button type="submit">Update Profile Information</button>
+        </form>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+
+</html>
