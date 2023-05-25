@@ -33,7 +33,7 @@ header {
 header h1 {
   margin-left: 60px;
   margin-right: 60px;
-  background-color: #f2f2f2;
+  background-color: rgba(121, 158, 244, 0.858)e9e;
   color: #333;
 }
 
@@ -121,29 +121,121 @@ li {
 /* Media Queries */
 
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
+  .container {
+    padding: 10px;
+  }
 
-    .task-list {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+  .task-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 
-    .task {
-        padding: 10px;
-    }
+  .task {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 480px) {
-    .logo h1 {
-        font-size: 24px;
-    }
+  .logo h1 {
+    font-size: 24px;
+  }
 
-    .section-title {
-        font-size: 20px;
-    }
+  .section-title {
+    font-size: 20px;
+  }
 
-    .task-list {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+  .task-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.initials {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #777;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.initials:hover {
+  background-color: #555;
+}
+
+.dropdown {
+  position: absolute;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(127, 159, 235, 0.97);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px 0;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #5d5454;
+  color: #bbb;
+}
+
+.user:hover .dropdown-content {
+  display: block;
+}
+
+.logout {
+  color: #555555;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.logout::before {
+  content: '';
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 600px) {
+  .initials {
+    font-size: 16px;
+  }
+
+  .dropdown-content a {
+    padding: 6px 12px;
+  }
+
+  .logout {
+    font-size: 14px;
+  }
 }

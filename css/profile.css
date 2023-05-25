@@ -7,33 +7,17 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #52617be8;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.profile-picture {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.profile-picture img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
 h2 {
   text-align: center;
-  color: #333;
-  font-size: 24px;
+  color: #c8c3c3;
+  font-size: 30px;
   margin-top: 20px;
-  background-color: #f2f2f2;
+  background-color: #787373c1;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -42,10 +26,6 @@ h2 {
 .profile-picture img:hover {
   transform: scale(1.1);
 }
-
-/* #profilePicInput {
-  display: none;
-} */
 
 form {
   margin-bottom: 20px;

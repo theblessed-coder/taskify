@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taskify - Profile</title>
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="images/icon2.png" type="image/png">
+    <link rel="icon"
+        href="data:image/png;base64,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"
+        type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&family=Ubuntu:wght@300;400;500&display=swap"
@@ -23,71 +26,50 @@
                 <a href="index.html" class="navbar-title">Taskify</a>
             </div>
             <div class="navbar-right">
-                <a href="index.html" class="navbar-item">Home</a>
-                <a href="dashboard.html" class="navbar-item">Dashboard</a>
-                <a href="task-detail.html" class="navbar-item">Tasks</a>
-                <a href="login.html" class="navbar-button">Login</a>
-                <a href="sign-up.html" class="navbar-button">Signup</a>
+                <div class="user">
+                    <div class="initials"></div>
+                    <div class="dropdown">
+                        <div class="dropdown-content">
+                            <a href="profile.html">Edit Profile</a>
+                            <a href="dashboard.html">Dashboard</a>
+                            <a href="project-mgt.html">Project Management</a>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="index.html" class="logout navbar-button">Logout</a>
             </div>
         </div>
     </nav>
 
     <div class="container6">
         <h2>My Profile</h2>
-        <div class="profile-picture">
-            <img id="profilePic" src="" alt="Profile Picture">
-            <label for="profilePicInput"></label>
-            <input type="file" id="profilePicInput" name="profilePicInput" accept="image/*">
-        </div>
         <form id="profileForm">
             <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" required>
-            </div>
-            <div class="form-group">
-                <label for="age">Age</label>
-                <input type="number" id="age" name="age">
-            </div>
-            <div class="form-group">
-                <label for="location">Location</label>
-                <input type="text" id="location" name="location" required>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
             </div>
             <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location">
+            </div>
+
+            <div class="form-group">
                 <label for="bio">Bio</label>
                 <br>
-                <textarea id="bio" name="bio" rows="3" required></textarea>
+                <textarea id="bio" name="bio" rows="8" required></textarea>
             </div>
             <div class="form-group">
                 <label for="interests">Interests</label>
-                <input type="text" id="interests" name="interests" required>
-            </div>
-            <div class="form-group">
-                <label for="facebook">Facebook</label>
-                <input type="text" id="facebook" name="facebook">
-            </div>
-            <div class="form-group">
-                <label for="twitter">Twitter</label>
-                <input type="text" id="twitter" name="twitter">
-            </div>
-            <div class="form-group">
-                <label for="instagram">Instagram</label>
-                <input type="text" id="instagram" name="instagram">
-            </div>
-            <div class="form-group">
-                <label for="linkedin">LinkedIn</label>
-                <input type="text" id="linkedin" name="linkedin">
-            </div>
-            <div class="form-group">
-                <label for="other">Other</label>
-                <input type="text" id="other" name="other">
+                <input type="text" id="interests" name="interests">
             </div>
             <button type="submit">Update Profile Information</button>
         </form>
