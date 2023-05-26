@@ -52,7 +52,7 @@ label {
 input[type='text'],
 input[type='number'],
 textarea {
-  width: 60%;
+  width: 80%;
   padding: 10px;
   font-size: 14px;
   border-radius: 5px;
