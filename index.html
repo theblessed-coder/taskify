@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Blessing Nwakwuo & Jesse Kyambadde">
     <title>Taskify</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/icon2.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&family=Ubuntu:wght@300;400;500&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/sign-up.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -22,19 +29,54 @@
                 <a href="index.html" class="navbar-title">Taskify</a>
             </div>
             <div class="navbar-right">
-                <a href="login.html" class="navbar-button">Login</a>
-                <a href="sign-up.html" class="navbar-button">Signup</a>
+                <a href="#" class="navbar-button" id="login" onclick="toggleLoginForm()">Login</a>
+                <a href="#" class="navbar-button" id="signup" onclick="toggleSignupForm()">Signup</a>
             </div>
         </div>
     </nav>
+
+    <!-- Login form -->
+    <div class="loginform form-container" id="login-page">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="validateForm(event)">
+            <input type="text" id="username1" placeholder="Username">
+            <div id="usernameError" class="error"></div>
+            <input type="password" id="password1" placeholder="Password">
+            <div id="passwordError" class="error"></div>
+            <a href="dashboard.html">
+                <input type="submit" value="Log In" class="button">
+            </a>
+        </form>
+    </div>
+
+    <!-- Sign up form -->
+    <div class="signupform form-container" id="signup-page">
+        <h2>Sign Up</h2>
+        <form id="signup-form" onsubmit="validateForm(event)">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+                <span class="error" id="username-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+                <span class="error" id="password-error"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign Up">
+            </div>
+        </form>
+    </div>
+
 
     <!-- main content -->
     <div class="main-content">
         <main>
             <section class="hero">
                 <h2>Organize Your Tasks Effectively</h2>
-                <p>Task Manager is a powerful application that helps you manage your tasks and stay organized.</p>
-                <a href="project-mgt.html" class="btn">Get Started</a>
+                <p><b><em>Taskify</em></b> is a powerful application that helps you manage your tasks and stay organized.</p>
+                <a href="#" class="btn">Get Started</a>
             </section>
 
             <section class="features">
@@ -66,6 +108,8 @@
 
 
     <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/sign-up.js"></script>
 </body>
 
 </html>
