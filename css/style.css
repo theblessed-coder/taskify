@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -44,7 +45,7 @@ body {
 
 .navbar-button {
   color: #fff;
-  background-color: #007bff;
+  background-color: #3782d3;
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
@@ -129,6 +130,7 @@ body {
 
 .form-container {
   display: none; /* Hide the forms by default */
+  font-family: 'Nunito', sans-serif;
 }
 
 /* main content */
@@ -228,6 +230,6 @@ footer {
   }
 
   .feature {
-    width: 100%;
+    width: 75%;
   }
 }

@@ -121,7 +121,7 @@ li {
 /* Media Queries */
 
 @media (max-width: 768px) {
-  .container {
+  .container1 {
     padding: 10px;
   }
 
