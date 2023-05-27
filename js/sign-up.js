@@ -2,17 +2,18 @@ function validateForm(event) {
   event.preventDefault();
 
   // Reset error messages
-  document.getElementById('username-error').textContent = '';
   document.getElementById('password-error').textContent = '';
 
   // Get input values
+  const fullname = document.getElementById('fullname').value;
   const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  // Validate username
-  if (username === '') {
-    document.getElementById('username-error').textContent =
-      'Username is required.';
+  // Validate email
+  if (email === '') {
+    document.getElementById('email-error').textContent =
+      'Email is required.';
     return;
   }
 
