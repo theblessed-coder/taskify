@@ -54,9 +54,18 @@
         <h2>Sign Up</h2>
         <form id="signup-form" onsubmit="validateForm(event)">
             <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" required>
+            </div>
+            <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" required>
                 <span class="error" id="username-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <span class="error" id="email-error"></span>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
@@ -75,7 +84,8 @@
         <main>
             <section class="hero">
                 <h2>Organize Your Tasks Effectively</h2>
-                <p><b><em>Taskify</em></b> is a powerful application that helps you manage your tasks and stay organized.</p>
+                <p><b><em>Taskify</em></b> is a powerful application that helps you manage your tasks and stay
+                    organized.</p>
                 <a href="#" class="btn">Get Started</a>
             </section>
 

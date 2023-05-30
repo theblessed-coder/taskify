@@ -33,6 +33,10 @@ input[type='email'] {
   outline: #2a6cd5;
 }
 
+input[type='email'] {
+  width: 90%;
+}
+
 .error {
   color: red;
 }

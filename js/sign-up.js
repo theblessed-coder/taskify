@@ -25,6 +25,6 @@ function validateForm(event) {
   }
 
   // Success message
-  alert('Sign-up successful!');
+  //alert('Sign-up successful!');
   document.getElementById('signup-form').reset();
 }
