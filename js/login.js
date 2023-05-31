@@ -22,8 +22,4 @@ function validateForm(event) {
     return;
   }
 
-  // Perform login logic here
-  // You can send the data to a server for authentication or perform client-side validation
-  // For this example, we'll just display a success message
-  alert('Login successful!');
 }
