@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="Blessing Nwakwuo">
-    <title>Taskify - Sign up</title>
-
-    <link rel="icon" href="images/icon2.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/sign-up.css">
-</head>
-
-<body>
-
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+    content %}
     <div class="container">
         <h2>Sign Up</h2>
-        <form id="signup-form" onsubmit="validateForm(event)">
+        <form method="POST" id="signup-form">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" required>
@@ -49,8 +32,4 @@
         </form>
     </div>
 
-    <script src="js/sign-up.js"></script>
-
-</body>
-
-</html>
+{% endblock %}   
