@@ -38,21 +38,21 @@
     <!-- Login form -->
     <div class="loginform form-container" id="login-page">
         <h2>Login</h2>
-        <form id="loginForm" onsubmit="validateForm(event)">
+        <form id="loginForm" onsubmit="loginFormHandler(event)">
             <input type="text" id="username1" placeholder="Username">
             <div id="usernameError" class="error"></div>
             <input type="password" id="password1" placeholder="Password">
             <div id="passwordError" class="error"></div>
-            <a href="dashboard.html">
-                <input type="submit" value="Log In" class="button">
-            </a>
+            <div class="form-group">
+                <input type="submit" value="Log In">
+            </div>
         </form>
     </div>
 
     <!-- Sign up form -->
     <div class="signupform form-container" id="signup-page">
         <h2>Sign Up</h2>
-        <form id="signup-form" onsubmit="validateForm(event)">
+        <form id="signup-form" onsubmit="signupFormHandler(event)">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" required>
@@ -75,7 +75,8 @@
         <main>
             <section class="hero">
                 <h2>Organize Your Tasks Effectively</h2>
-                <p><b><em>Taskify</em></b> is a powerful application that helps you manage your tasks and stay organized.</p>
+                <p><b><em>Taskify</em></b> is a powerful application that helps you manage your tasks and stay
+                    organized.</p>
                 <a href="#" class="btn">Get Started</a>
             </section>
 
