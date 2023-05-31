@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Blessing Nwakwuo & Jesse Kyambadde">
+    <title>Taskify</title>
+    <link rel="icon" href="images/icon2.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&family=Ubuntu:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/sign-up.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-title">Taskify</a>
+            </div>
+            <div class="navbar-right">
+                <a href="#" class="navbar-button" id="login" onclick="toggleLoginForm()">Login</a>
+                <a href="#" class="navbar-button" id="signup" onclick="toggleSignupForm()">Signup</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login form -->
+    <div class="loginform form-container" id="login-page">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="validateForm(event)">
+            <input type="text" id="username1" placeholder="Username">
+            <div id="usernameError" class="error"></div>
+            <input type="password" id="password1" placeholder="Password">
+            <div id="passwordError" class="error"></div>
+            <a href="dashboard.html">
+                <input type="submit" value="Log In" class="button">
+            </a>
+        </form>
+    </div>
+
+    <!-- Sign up form -->
+    <div class="signupform form-container" id="signup-page">
+        <h2>Sign Up</h2>
+        <form id="signup-form" onsubmit="validateForm(event)">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+                <span class="error" id="username-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <span class="error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+                <span class="error" id="password-error"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign Up">
+            </div>
+        </form>
+    </div>
+
+
+    <!-- main content -->
+    <div class="main-content">
+        <main>
+            <section class="hero">
+                <h2>Organize Your Tasks Effectively</h2>
+                <p><b><em>Taskify</em></b> is a powerful application that helps you manage your tasks and stay
+                    organized.</p>
+                <a href="#" class="btn">Get Started</a>
+            </section>
+
+            <section class="features">
+                <div class="feature">
+                    <img src="data:image/png;base64,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"
+                        alt="To-Do List Icon">
+                    <h3>Create Tasks</h3>
+                    <p>Easily create and organize your tasks with our intuitive interface.</p>
+                </div>
+                <div class="feature">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACCCAMAAAC93eDPAAABWVBMVEX///8AAADU4Vf/kBfAyjPb6VrY5VmyvEkpLRGwvsX/ckT/b0TRWzeJiYnH0TVwdi7c3Nz/gDD/lRi4uLj/jgrFzzyBiCJ7gzOXl5fP21WXZgXDw8P/5tb/p1q4w0tPLQefWg7/rwhZXiT92ES1vzDT4E7CzU9/iY6hq0JjaBuHjzdFSh0PEAb/cwDg6oxCR0lLUFQcHiCNmJ3/mDrv9Mbt7e2oqKi+bBF4fiBoOgkmJiY/QhGrsy01OA6Oo63/hQBwcHDm7p5jailjY2OMlCWVnj0YGQZZXRjUeRP/4Mj/07FAJAY1NTX/n0n/8ufZ5XD2+N7o760hIw2epSpKThVbaG7Cyn8tGQSDSgzphBWhpnIfEQP/rWn/tXz/yJvT2KBrNRXBYCVuLx1bKBigRip1TwTimAdiQgO5fQb+x3aPfiv+8LjYvD5YThn93Fz+5Ii3nDH91CD94HLuUPjWAAAJ7ElEQVR4nO2b+UPbxhLHfSHcvuJQHwTVNqGJbY64AQM2BuzYDWAwMW5iSIEG6Dt6vJejbfL///BmdrXSSlppV75+6vcHJGRp9fHM7OzsLoRCLs2HJ6Q597s89DcCQyjHx6xBYIQHM2PWbHAELTJWaVNAKBaL7GhqugjaMxAcf3jG6YfpWgGee1WMFL/nG9qx7DAMQkTX9VERXo+EsBajyihy6OO3wloixiDUGHZ2dvBLP9vh9P0wCNV5UBbuPmmgCgllBtYDiuIuoYqQOtw3k2mZpMi1grodfKWIMCdI650GGMLRnEf+wz6kGefcbVoAhEXh0DIoOM0wc/xQqFktoq0a5xDE+gN6uqopI8xX4Kbehk3IUHeaYeaxeBx8OBPRXhjnJU3TjdMX6ggYhBtf2LUC1+JBEB6MhFCDe1YcCF9gGzEnwmUgKzxWR0jBPW8cBM8xGJxW0JZmhSrBu0rGOSY043QpQCwg8uYKrzb20TVXl9A8xH0UcZwr9ohDsX0bY0kMagjVfRHBAhgh0Hg1CkIo1HYBxI8SU82OEA/ZGghz1MEC6OiiYBEEcb/zniFHShQ/Unp0Ao3vBKK+UlLvEQ4E51itu5yEaWcmMrNunEPn0+OCewLkBRFCxhpu9bICQlN0z6hWMENxaCsMj+Cqmh4IdAw5eZWevigB5kPRPQER7FVTIcZVTSolguZxT4CqabNXQcHd5Q5oAFUTQPBTkgnnBdWqaXIIqlWTgooZGkbWg0oIZIjY3+QlrpqkysQsMYixVE06L/OC/ROTgCZWLphHq5oogt7k1iue6tDmwDgpddjlZokRXKwdNJsnCwRCHUFSNdmyY1ynbYbjWESZl8swHgBBomFmSXOgVa+a3mxxRdPWCobHSTAENEHHurNu+GKkqumCtqHHhY6AxkvWulRJAyMUCGxlv0IeX6DfQLFqqogI6iw3aaKsqNk+gN/ACCf42MpzCGZShtFOrZiaqm47dAJWTWCEBj63RWOpR7+DOgLEQ6q2uGhUTfV6fYFUTUGyQiaWWODCegvOm8QTQ1dNpHcHIECENcsI3FRoHFWTMgKGgplfKiMjcFWTOVhHBGOyxiGskWB8TtIK5pXw0I6IOQeax1Q4c5y9fGzT5axmIRzB0xvPqd7A+eXwseDwBCvcngLCsbPjrFoIsQJeaBOCrYqZGAIgVEGkaiqguIGGZcdLPwQyPtTxyibkVrRBOE6/h3rVVCmj8FFyMlgz5zKcFWY8EDJ0dGzYU1uM2jOz9ON8VUogqpoGDdYtl6hwZqIvOaQzgFijftCxt9A8uSAUiWdyG9QEBGBIVjX5TdwimJlxiDwRttE8wgwjRyBDRMVWNfWIJRMKuYEEQePAfGn55d7e3qMr63eAkCN4VU1NhcKNOKFuvO7R9e7NTZTo5nR5j4VxQY4gqZokBImGsQJ1fRpNJqNMcHqzTI1R/kmK4FU1dQwE14TdnLgTAvplr2/o69NUFCO6+5Z8uChDIFXTob1qwvBga02rnGbh9xIcyVIWEhyRd+xRgHQrfX57d3d3m4+2WmkCsUw+b8sY/NeabNPagVG4wbSWI1imxk/fdftGk/3c/TmxRfL0SoVhXrjWxKYRwtoREdALxNe7Rgi07M3m8miJZPSlii8EVZNVAtuswCHEjFHh7SkQEOe37h3tds9beH0Pb6vJfFFNLYIwSx7USdVkTQQi67wwFuCwiuVqjKQDQpDvn6XhJ3z1bvf+rJtjDrkn3iAM8zIG6pGwqGqyFQgRWjSQmp3kA/RC+g4ezgPD7TnEISi9fdulTZ6hgW7QFxvqCGpVE6vZrzEOkvhwn3RJIy2k063tM+oM8EXyRskVdgTp5hgYAVPSHu2MeWLzqE3pVp64I4cM2DfL8vHSY63JywgXLBAIQ//cQYBXt4k3CNsjlQwVCrJDZ0xcrllGTkfdBOiOHDYLUZI8hbv3FcxArQBFE41HVrnpruk9dgc0wo3gvXYG9EUuapgh5fPu7KYrMbmqJqaHNCvVzUjwZdgmrmhRM/S8CURVU7whyo6gdYIQuzQ6pIwB01UfvYTPenpCXDU1C4IxglqhSBPjlRQAha64g2i49umXdDvCtkHHqiayvvDUrmNczUhcKPmBmQGSQ3I37F1Jy6om9wQqQ0NBwQ+AQPIWpkifDKm8Q+fskqdKjmjl+t17gE1eeQeDqGpChI5n4QZWgBGqLOuShhm207R8wW7pMVbRqsm2Q7eCwXDiiQDmaYbDL9UQmEg8eg2X/mtNQoTCEAg4TmQ9EPyrJjFCHGr2QAT+CKHqhpvAWmtyzOePtUkggCFqi7Vazaya6kdW1SRITRNBsALTqprYKFWeOoJrh65T5oVjxFQQ+K5QskufSDiKrMBtagjm8xOOBeYJ752pCSFUQ1zVFOPjcToIWWeCjJOVIq8yegIIvlWTYLAeP4J/1WSf0K2vz04gO9KqqcKJbmoYexrTyI5YNfUEVVNcsDEUDk8kNUmqpmlYQVY1rdq1NIFYMHboeNmqJvdy5/h7xDBV05gRvHfohAC4NW4isCU+ttKXFkuGIKyaFrx26MiSL0NIn+VyuVt4QxeOWC3nxJIiYNWEO3TWWhNXNQkAEhc4o0SEFq4gwHSNTNsA4dyjfYbQky21yHfo6NY4XfUeBgFSYM13lUG+1lRk62zh8NvlYAjR05f0wZ7fiE0QMkQexYIxpw6zRef0eT6fx/bz3FEg0iVUlqTlfxNvIJSXjVVvW0/w7xEIkdyVrTnJEXSK4DutZ290I0TpFF+GYDjCSwaCD8E2iB1NBUOISSRBYAG63edbDoaQ8NF0EMifXHqpMRUEX8FcNyEJR4Jwm04nc3zLybEh/PT69euf4fjPr731HYgdTZmf/mtUBFw+rcLx3/8YUl9+JUGopiSqMoQvh5UMQUmI8J+vhtUv40IYTX8jjAdh0S4sfn/9xlNX4fC+4wnpIkNQ4TTkm2+99BvMxQ6HbBk7KK6VzqeypC9mU6mssOTCZPK7J8J/w0H+nscunGm2Q/QPY9FyuG8jXL6twrSn/Jvxxu4ZOfyvzxB+Dyus7vggzNkRKuLCE/+z4d0T1Kf38Our9zswQvXJhScfMPxUNge9ENp2BI+2yH/kfsAXvueuviIIH0fwAwl8fHUWjugAnGd4fB3sEx/xhX+8Mq/1/8QLf41ihCAioxt1xZ8Uov+euqE8ihECac5i+PTk8+fPf3z6ZAbC/lQIaKBQX3AiXlD8mwFfpQ7bh9jMXLvdBq9W4eA2LZ0XD/7iAD58JATjyIRcj8Ctd/T7pvsuY27efPeBvv8dBRgLgTMv4L8dChD4/3samGe9MXiBQ9igfkUriHcbs72xj4iG8N9HyPo0KMQdBXemeIje3HhMEFTzqbkN8FSvXVMKgv8DMCz7QqppdWYAAAAASUVORK5CYII="
+                        alt="Reminder Icon">
+                    <h3>Set Reminders</h3>
+                    <p>Never miss a deadline by setting reminders for your tasks.</p>
+                </div>
+                <div class="feature">
+                    <img src="data:image/png;base64,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"
+                        alt="Smartphone Icon">
+                    <h3>Access Anywhere</h3>
+                    <p>Access your tasks on the go with our mobile-friendly design.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Task Manager. All rights reserved.</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/sign-up.js"></script>
+</body>
+
+</html>
