@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Blessing Nwakwuo & Jesse Kyambadde">
+    <title>Taskify</title>
+    <link rel="icon" href="images/icon2.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&family=Ubuntu:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/sign-up.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-title">Taskify</a>
+            </div>
+            <div class="navbar-right">
+                <a href="#" class="navbar-button" id="login" onclick="toggleLoginForm()">Login</a>
+                <a href="#" class="navbar-button" id="signup" onclick="toggleSignupForm()">Signup</a>
+            </div>
+        </div>
+    </nav>
+
+            <main>
+                {% block content %}home{% endblock %}
+            </main>
+
+    
+    
+    <footer>
+        <p>&copy; 2023 Task Manager. All rights reserved.</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/sign-up.js"></script>
+</body>
+
+</html>   
