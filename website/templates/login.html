@@ -3,13 +3,13 @@
 <div class="container">
     <h2>Login</h2>
     
-    <form id="loginForm" onsubmit="validateForm(event)">
-        <input type="text" id="username" placeholder="Username">
+    <form method="POST" id="loginForm" onsubmit="validateForm(event)">
+        <input type="text" name="username" id="username" placeholder="Username">
         <div id="usernameError" class="error"></div>
-        <input type="password" id="password" placeholder="Password">
+        <input type="password" name="password" id="password" placeholder="Password">
         <div id="passwordError" class="error"></div>
-        <input type="submit" value="Log In" class="button">
-        <p class="signup-text">Don't have an account? <a class="signup-link" href="sign-up.html">Sign Up</a></p>
+        <button type="submit" name="submit" value="Log In" class="button"> Login</button>
+        <p class="signup-text">Don't have an account? <a class="signup-link" href="/sign-up">Sign Up</a></p>
     </form>
 </div>
 <script src="{{ url_for('static', filename='js/login.js') }}"></script>
