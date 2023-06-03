@@ -8,6 +8,8 @@ DB_NAME = 'database.db'
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'valar morghulis'
+    app.config['SQLALCHEMY_DATABASE_URL'] = f'sqlite:///{DB_NAME}'
+    db.init_app(app)
 
 
     from .views import views
