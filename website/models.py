@@ -11,13 +11,14 @@ class Task(db.Model):
     due_date = db.Column(db.Date(timezone=True))
     priority = db.Column(db.String(32))
     completed = db.Column(db.Boolean, default=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))   #one-many relationship: one user that has many notes
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))   #one-many relationship: one user that has many tasks
 
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128))
     description = db.Column(db.Text)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    
 
 
 class User(db.Model,  UserMixin):
