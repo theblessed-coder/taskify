@@ -25,5 +25,5 @@ class User(db.Model,  UserMixin):
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
-    full_name = db.Column(db.String(150))
+    fullname = db.Column(db.String(150))
     tasks = db.relationship('Task')             #to access all tasks created by a user
