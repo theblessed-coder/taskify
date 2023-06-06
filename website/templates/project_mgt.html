@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block content %}
+
+<!-- main content -->
+<div class="container3">
+        <h1>Project Management</h1>
+        <div class="projects">
+            <h2>Projects</h2>
+            <button class="button" onclick="openCreateProjectModal()">Create Project</button>
+            <ul id="projectList"></ul>
+        </div>
+        <div class="tasks">
+            <h2>Tasks</h2>
+            <button class="button" onclick="openCreateTaskModal()">Create Task</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+    
+    <!-- Create Project Modal -->
+    <div id="createProjectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateProjectModal()">&times;</span>
+            <h2>Create Project</h2>
+            <input type="text" id="projectName" placeholder="Project Name">
+            <button class="button" onclick="createProject()">Create</button>
+        </div>
+    </div>
+    
+    <!-- Create Task Modal -->
+    <div id="createTaskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateTaskModal()">&times;</span>
+            <h2>Create Task</h2>
+            <input type="text" id="taskName" placeholder="Task Name">
+            <select id="projectSelect">
+                <option value="" selected disabled>Select Project</option>
+            </select>
+            <button class="button" onclick="createTask()">Create</button>
+        </div>
+    </div>
+
+{% endblock %}
