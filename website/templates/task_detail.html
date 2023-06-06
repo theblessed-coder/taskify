@@ -2,24 +2,41 @@
 
 <!-- main content -->
 <div class="container4">
-    <h2>Task Details</h2>
-    <div class="task-details">
-        <label>Title:</label>
-        <p id="title">Task Title</p>
-        <label>Description:</label>
-        <p id="description">Task Description</p>
-        <label>Due Date:</label>
-        <p id="due-date">Task Due Date</p>
-        <label>Priority:</label>
-        <p id="priority">Task Priority</p>
-        <label>Status:</label>
-        <p id="status">Task Status</p>
-    </div>
-    <div class="button-container">
-        <button class="button" onclick="markCompleted()">Mark as Completed</button>
-        <button class="button button-secondary" onclick="updateTask()">Update Task</button>
-        <button class="button button-secondary" onclick="deleteTask()">Delete Task</button>
-    </div>
+  <h2>Task Details</h2>
+  <div class="task-details">
+    <form action="/your-action-endpoint" method="POST">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" value="Task Title" />
+
+      <label for="description">Description:</label>
+      <input
+        type="text"
+        id="description"
+        name="description"
+        value="Task Description"
+      />
+
+      <label for="due-date">Due Date:</label>
+      <input type="date" id="due-date" name="due-date" value="Task Due Date" />
+
+      <label for="priority">Priority:</label>
+      <input type="text" id="priority" name="priority" value="Task Priority" />
+
+      <label for="status">Status:</label>
+      <input type="text" id="status" name="status" value="Task Status" />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+  <div class="button-container">
+    <button class="button" onclick="markCompleted()">Mark as Completed</button>
+    <button class="button button-secondary" onclick="updateTask()">
+      Update Task
+    </button>
+    <button class="button button-secondary" onclick="deleteTask()">
+      Delete Task
+    </button>
+  </div>
 </div>
 
 {% endblock %}
