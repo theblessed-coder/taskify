@@ -25,14 +25,6 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/login.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/sign-up.css') }}"
-    />
-    <link
-      rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
   </head>
@@ -65,12 +57,12 @@
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %} {% if category ==
     'error' %}
-    <div style="color: red; background-color: white">
+    <div style="color: red; background-color: white; padding: 10px">
       {{ message }}
       <button><span aria-hidden="true">&times;</span></button>
     </div>
     {% else %}
-    <div style="color: green; background-color: yellow">
+    <div style="color: green; background-color: yellow; padding: 10px">
       {{ message }}
       <button><span aria-hidden="true">&times;</span></button>
     </div>
@@ -82,7 +74,5 @@
     </footer>
 
     <script src="../static/js/script.js"></script>
-    <script src="../static/js/login.js"></script>
-    <script src="../static/js/sign-up.js"></script>
   </body>
 </html>
